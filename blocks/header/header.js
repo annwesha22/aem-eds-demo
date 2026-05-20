@@ -115,7 +115,15 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  let navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  // Locale-aware nav: use locale-specific nav if available
+  if (!navMeta) {
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    const locales = ['zh'];
+    if (segments.length > 0 && locales.includes(segments[0])) {
+      navPath = `/${segments[0]}/nav`;
+    }
+  }
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM

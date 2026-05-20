@@ -1,0 +1,81 @@
+.sign-in {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.sign-in .sign-in-form {
+  background-color: var(--background-color);
+  border: 1px solid #dadada;
+  border-radius: 12px;
+  padding: 40px 32px;
+}
+
+.sign-in .sign-in-form h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sign-in .sign-in-error {
+  background-color: #fee;
+  color: #c00;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: var(--body-font-size-xs);
+}
+
+.sign-in .sign-in-field {
+  margin-bottom: 20px;
+}
+
+.sign-in .sign-in-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: var(--body-font-size-s);
+}
+
+.sign-in .sign-in-field input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: var(--body-font-size-s);
+  border: 2px solid #dadada;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.sign-in .sign-in-field input:focus {
+  border-color: var(--link-color);
+}
+
+.sign-in .sign-in-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: var(--body-font-size-xs);
+}
+
+.sign-in .sign-in-remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.sign-in .sign-in-forgot {
+  color: var(--link-color);
+  font-size: var(--body-font-size-xs);
+}
+
+.sign-in .sign-in-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: var(--body-font-size-s);
+  border-radius: 8px;
+}

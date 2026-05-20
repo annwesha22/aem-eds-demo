@@ -1,0 +1,10 @@
+{
+  "project": "AEM EDS Demo",
+  "plugins": [
+    {
+      "id": "asset-selector",
+      "title": "Asset Selector",
+      "url": "/tools/sidekick/plugins/asset-selector/asset-selector.js"
+    }
+  ]
+}

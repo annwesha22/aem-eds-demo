@@ -131,7 +131,12 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  // Set document language based on URL locale
+  const pathSegments = window.location.pathname.split('/').filter(Boolean);
+  const supportedLocales = ['en', 'zh'];
+  const detectedLocale = pathSegments.length > 0 && supportedLocales.includes(pathSegments[0])
+    ? pathSegments[0] : 'en';
+  document.documentElement.lang = detectedLocale;
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
