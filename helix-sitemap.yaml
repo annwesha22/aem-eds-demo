@@ -1,0 +1,13 @@
+sitemaps:
+  default:
+    lastmod: YYYY-MM-DD
+    languages:
+      en:
+        source: /query-index.json
+        destination: /sitemap-en.xml
+        hreflang: en
+      zh:
+        source: /zh/query-index.json
+        destination: /sitemap-zh.xml
+        hreflang: zh
+        alternate: /zh/{path}
